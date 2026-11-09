@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_card"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView style="@style/Label" android:text="IP de este celular (escríbela en el monitor)"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvIp" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/ink"
+                android:layout_marginTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnCopy" style="@style/BtnOutline" android:text="Copiar IP" android:layout_marginTop="12dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button android:id="@+id/btnBt" style="@style/Btn" android:text="Conectar al Arduino (Bluetooth)" android:layout_marginTop="14dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_card"
+            android:layout_marginTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView style="@style/Label" android:text="Estado" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvStatus" android:text="Arduino sin conectar" android:textSize="18sp" android:textColor="@color/ink"
+                android:layout_marginTop="4dp" android:accessibilityLiveRegion="polite"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvClients" android:text="Monitores conectados: 0" android:textSize="16sp" android:textColor="@color/ink2"
+                android:layout_marginTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_card"
+            android:layout_marginTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView style="@style/Label" android:text="Última lectura recibida" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvData" android:text="--" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/ink"
+                android:layout_marginTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

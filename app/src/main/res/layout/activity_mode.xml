@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp">
+    <TextView android:text="¿Cómo usarás este celular?" android:textSize="24sp" android:textStyle="bold"
+        android:textColor="@color/ink" android:layout_marginTop="8dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:id="@+id/btnNode" android:orientation="vertical" android:padding="18dp"
+        android:background="@drawable/bg_card" android:foreground="?attr/selectableItemBackground"
+        android:clickable="true" android:focusable="true" android:layout_marginTop="20dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="Nodo del invernadero" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/primary_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:text="Se conecta al Arduino por Bluetooth y comparte los datos por WiFi."
+            android:textSize="16sp" android:textColor="@color/ink2" android:layout_marginTop="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/btnMonitor" android:orientation="vertical" android:padding="18dp"
+        android:background="@drawable/bg_card" android:foreground="?attr/selectableItemBackground"
+        android:clickable="true" android:focusable="true" android:layout_marginTop="14dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="Monitor remoto" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/primary_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:text="Ve temperatura y humedad, recibe alertas y controla el ventilador."
+            android:textSize="16sp" android:textColor="@color/ink2" android:layout_marginTop="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+    <Button android:id="@+id/btnLogout" style="@style/BtnOutline" android:text="Cerrar sesión"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>

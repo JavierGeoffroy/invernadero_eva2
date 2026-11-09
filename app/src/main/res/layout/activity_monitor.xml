@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView style="@style/Label" android:text="IP del nodo" android:labelFor="@+id/etIp"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etIp" style="@style/Input" android:hint="Ej. 192.168.1.20" android:inputType="phone"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_marginTop="10dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/btnConnect" style="@style/Btn" android:text="Conectar"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnDisconnect" style="@style/BtnOutline" android:text="Desconectar" android:layout_marginStart="10dp"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvStatus" android:text="Sin conexión" android:textSize="16sp" android:textColor="@color/ink2"
+            android:layout_marginTop="10dp" android:accessibilityLiveRegion="polite"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_marginTop="14dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:background="@drawable/bg_card"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                <TextView style="@style/Label" android:text="Temperatura" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/tvTemp" android:text="-- °C" android:textSize="32sp" android:textStyle="bold" android:textColor="@color/ink"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:background="@drawable/bg_card" android:layout_marginStart="10dp"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                <TextView style="@style/Label" android:text="Humedad" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/tvHum" android:text="-- %" android:textSize="32sp" android:textStyle="bold" android:textColor="@color/ink"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/tvAlert" android:text="Esperando datos..." android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/ink2" android:background="@drawable/bg_card" android:padding="14dp"
+            android:layout_marginTop="14dp" android:accessibilityLiveRegion="polite"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_marginTop="14dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                <TextView style="@style/Label" android:text="Alerta sobre (°C)" android:labelFor="@+id/etMaxT"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/etMaxT" style="@style/Input" android:text="30" android:inputType="numberDecimal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_marginStart="10dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                <TextView style="@style/Label" android:text="Alerta sobre (% HR)" android:labelFor="@+id/etMaxH"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/etMaxH" style="@style/Input" android:text="80" android:inputType="numberDecimal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/swFan" android:text="Ventilador / riego" android:textSize="18sp"
+            android:textColor="@color/ink" android:padding="16dp" android:background="@drawable/bg_card" android:minHeight="56dp"
+            android:layout_marginTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:padding="16dp" android:background="@drawable/bg_card"
+            android:layout_marginTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView style="@style/Label" android:text="Historial (últimas 20 lecturas)" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tvHistory" android:text="Sin lecturas todavía" android:textSize="15sp" android:textColor="@color/ink"
+                android:layout_marginTop="6dp" android:lineSpacingMultiplier="1.3"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
